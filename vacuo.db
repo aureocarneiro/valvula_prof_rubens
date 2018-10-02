@@ -1,0 +1,23 @@
+# Teste de Ether IP para o CLP do Imas lendo a variável boleana de entrada de temperatura
+
+record(bo, "$(IOC):rele0")
+{
+    field(SCAN, "1 second")
+    field(DTYP, "EtherIP")
+    field(OUT, "@$(PLC) Local:2:O.Pt00.Data")
+    field(ZNAM, "False")
+    field(ONAM, "True")
+}
+
+record(bo, "$(IOC):rele1")
+{
+    field(SCAN, "1 second")
+    field(DTYP, "EtherIP")
+    field(OUT, "@$(PLC) Local:2:O.Pt01.Data")
+    field(ZNAM, "False")
+    field(ONAM, "True")
+}
+
+
+
+
