@@ -1,0 +1,30 @@
+#ss
+record(ai, "$(PREFIX):int2-RB") {
+    field(DESC, "Averaging time readback")
+    field(DTYP, "stream")
+    field(EGU, "mBar")
+    field(INP, "@rad2.proto getAveragingTime $(PORT)")
+    field(PINI, "YES")
+    field(SCAN, "1 second")
+    field(PREC, "10")
+    field(HIHI, "2")
+    field(HIGH, "2")
+    field(LOW, "-1")
+    field(LOLO, "-1")
+    field(HHSV, "MAJOR")
+    field(HSV, "NO_ALARM")
+    field(LSV, "NO_ALARM")
+    field(LLSV, "NO_ALARM")
+}
+
+record(ao, "$(PREFIX):int2-SP") {
+    field(DESC, "Averaging time setpoint")
+    field(DTYP, "stream")
+    field(EGU, "mBar")
+    field(DRVH, "120")
+    field(DRVL, "-10")
+    field(OUT, "@rad2.proto setAveragingTime $(PORT)")
+    field(PINI, "YES")
+    field(PREC, "10")
+}
+
